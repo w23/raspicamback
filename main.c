@@ -14,14 +14,9 @@ static const char shader_vertex[] =
 static const char shader_fragment_show[] =
 	"#extension GL_OES_EGL_image_external: require\n"
 	"uniform samplerExternalOES us2_texture;"
-	//"uniform sampler2D us2_texture;"
 	"uniform float uf_time;"
 	"varying vec2 vv2_pos;"
 	"void main() {"
-		//"float a = 5. * atan(vv2_pos.x, vv2_pos.y);"
-		//"float r = .1 * sin(.4 * uf_time + length(vv2_pos)*3.);"
-		//"gl_FragColor = texture2D(us2_texture, gl_FragCoord.xy);"// + r*vec2(sin(a),cos(a)));"
-		//"gl_FragColor = vec4(vv2_pos, 0., 0.);"
 		"gl_FragColor = texture2D(us2_texture, vv2_pos*.5 + .5);"
 	"}"
 ;
